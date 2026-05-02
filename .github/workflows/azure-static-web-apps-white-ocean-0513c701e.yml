@@ -43,9 +43,14 @@ jobs:
           app_location: "/" # App source code path
           api_location: "" # Api source code path - optional
           output_location: "dist/pre1-standalone/browser" # Built app content directory - optional
+          app_build_command: "node set-env.js && npm run build"
           github_id_token: ${{ steps.idtoken.outputs.result }}
           ###### End of Repository/Build Configurations ######
-
+        env:
+          API_URL: ${{ secrets.API_URL }}
+          KEYCLOAK_URL: ${{ secrets.KEYCLOAK_URL }}
+          KEYCLOAK_REALM: ${{ secrets.KEYCLOAK_REALM }}
+          KEYCLOAK_CLIENT: ${{ secrets.KEYCLOAK_CLIENT }}
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
     runs-on: ubuntu-latest
