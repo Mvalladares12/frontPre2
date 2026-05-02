@@ -1,0 +1,419 @@
+/* tabla-municipios.component.css */
+.container {
+  padding: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+h2 {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.filter-field {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.table-container {
+  position: relative;
+  overflow-x: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+table {
+  width: 100%;
+  min-width: 800px; /* Ancho mínimo antes de scroll horizontal */
+}
+
+/* Estilos para badges */
+.codigo-badge {
+  background-color: #e3f2fd;
+  color: #1976d2;
+  padding: 4px 8px;
+  border-radius: 16px;
+  font-weight: 500;
+  font-size: 12px;
+  display: inline-block;
+}
+
+.depto-badge {
+  background-color: #f3e5f5;
+  color: #7b1fa2;
+  padding: 4px 8px;
+  border-radius: 16px;
+  font-weight: 500;
+  font-size: 12px;
+  display: inline-block;
+}
+
+/* Estilos para chips de distritos */
+.distritos-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  align-items: center;
+}
+
+.distrito-chip {
+  background-color: #e8f5e8 !important;
+  color: #2e7d32 !important;
+  font-size: 11px;
+  min-height: 24px;
+  padding: 0 8px;
+  white-space: nowrap;
+}
+
+.distritos-count {
+  margin-left: 4px;
+  color: #666;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.no-distritos {
+  color: #999;
+  font-style: italic;
+  font-size: 12px;
+  padding: 4px 8px;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+/* Acciones container */
+.acciones-container {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Mensaje sin datos */
+.no-data-message {
+  padding: 24px;
+  text-align: center;
+  color: #666;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+/* Hover en filas */
+.mat-row:hover {
+  background-color: #f5f5f5;
+}
+
+/* Estilos de cabecera */
+.mat-header-cell {
+  font-weight: 600;
+  color: #333;
+  background-color: #f5f5f5;
+  font-size: 13px;
+  padding: 12px 8px !important;
+}
+
+.mat-cell {
+  padding: 12px 8px !important;
+  font-size: 13px;
+}
+
+/* Ajustes de columnas - Versión desktop */
+.mat-column-id {
+  width: 60px;
+  text-align: center;
+  padding-left: 16px !important;
+}
+
+.mat-column-codigo {
+  width: 100px;
+  text-align: center;
+}
+
+.mat-column-nombre {
+  min-width: 150px;
+}
+
+.mat-column-idDepartamento {
+  width: 100px;
+  text-align: center;
+}
+
+.mat-column-distritos {
+  min-width: 200px;
+}
+
+.mat-column-acciones {
+  width: 120px;
+  text-align: center;
+  padding-right: 16px !important;
+}
+
+/* Botones de acción */
+button[mat-icon-button] {
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  padding: 0;
+  margin: 0 2px;
+}
+
+button[mat-icon-button] .mat-icon {
+  font-size: 18px;
+  width: 18px;
+  height: 18px;
+  line-height: 18px;
+}
+
+/* Tooltip personalizado */
+.mat-tooltip {
+  font-size: 12px;
+}
+
+/* ===== DISEÑO RESPONSIVE ===== */
+
+/* Tablets y pantallas medianas */
+@media screen and (max-width: 1024px) {
+  .container {
+    padding: 16px;
+  }
+
+  table {
+    min-width: 700px;
+  }
+
+  .mat-column-nombre {
+    min-width: 130px;
+  }
+
+  .mat-column-distritos {
+    min-width: 180px;
+  }
+
+  .mat-column-acciones {
+    width: 100px;
+  }
+
+  button[mat-icon-button] {
+    width: 28px;
+    height: 28px;
+  }
+
+  button[mat-icon-button] .mat-icon {
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+    line-height: 16px;
+  }
+}
+
+/* Móviles grandes */
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 12px;
+  }
+
+  h2 {
+    font-size: 20px;
+    margin-bottom: 16px;
+  }
+
+  .table-container {
+    border-radius: 6px;
+  }
+
+  table {
+    min-width: 600px;
+  }
+
+  .mat-header-cell {
+    font-size: 12px;
+    padding: 10px 6px !important;
+  }
+
+  .mat-cell {
+    font-size: 12px;
+    padding: 10px 6px !important;
+  }
+
+  .mat-column-id {
+    width: 45px;
+    padding-left: 12px !important;
+  }
+
+  .mat-column-codigo {
+    width: 70px;
+  }
+
+  .mat-column-nombre {
+    min-width: 110px;
+  }
+
+  .mat-column-idDepartamento {
+    width: 70px;
+  }
+
+  .mat-column-distritos {
+    min-width: 150px;
+  }
+
+  .mat-column-acciones {
+    width: 90px;
+    padding-right: 12px !important;
+  }
+
+  .codigo-badge, .depto-badge {
+    font-size: 11px;
+    padding: 3px 6px;
+  }
+
+  .distrito-chip {
+    font-size: 10px;
+    min-height: 22px;
+    padding: 0 6px;
+  }
+
+  .acciones-container {
+    gap: 2px;
+  }
+
+  button[mat-icon-button] {
+    width: 26px;
+    height: 26px;
+  }
+}
+
+/* Móviles pequeños */
+@media screen and (max-width: 480px) {
+  .container {
+    padding: 8px;
+  }
+
+  h2 {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+
+  .filter-field {
+    margin-bottom: 12px;
+  }
+
+  /* La tabla mantiene scroll horizontal */
+  table {
+    min-width: 500px;
+  }
+
+  .mat-header-cell {
+    font-size: 11px;
+    padding: 8px 4px !important;
+  }
+
+  .mat-cell {
+    font-size: 11px;
+    padding: 8px 4px !important;
+  }
+
+  .mat-column-id {
+    width: 35px;
+    padding-left: 8px !important;
+  }
+
+  .mat-column-codigo {
+    width: 55px;
+  }
+
+  .mat-column-nombre {
+    min-width: 90px;
+  }
+
+  .mat-column-idDepartamento {
+    width: 55px;
+  }
+
+  .mat-column-distritos {
+    min-width: 120px;
+  }
+
+  .mat-column-acciones {
+    width: 75px;
+    padding-right: 8px !important;
+  }
+
+  .codigo-badge, .depto-badge {
+    font-size: 10px;
+    padding: 2px 4px;
+    border-radius: 12px;
+  }
+
+  .distrito-chip {
+    font-size: 9px;
+    min-height: 20px;
+    padding: 0 4px;
+  }
+
+  .distritos-count {
+    font-size: 9px;
+  }
+
+  .no-distritos {
+    font-size: 10px;
+    padding: 2px 4px;
+  }
+
+  .acciones-container {
+    gap: 0px;
+  }
+
+  button[mat-icon-button] {
+    width: 24px;
+    height: 24px;
+  }
+
+  button[mat-icon-button] .mat-icon {
+    font-size: 14px;
+    width: 14px;
+    height: 14px;
+    line-height: 14px;
+  }
+
+  /*.mat-paginator {*/
+  /*  font-size: 11px;*/
+  /*}*/
+}
+
+/* Mejoras para el scroll en móviles */
+@media (hover: none) and (pointer: coarse) {
+  .table-container {
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+  }
+
+  .table-container::-webkit-scrollbar {
+    height: 4px;
+  }
+
+  .table-container::-webkit-scrollbar-thumb {
+    background-color: rgba(0,0,0,0.2);
+    border-radius: 4px;
+  }
+}
+
+/* Ajustes para pantallas muy pequeñas */
+@media screen and (max-width: 360px) {
+  table {
+    min-width: 450px;
+  }
+
+  .mat-column-distritos {
+    min-width: 100px;
+  }
+
+  .distrito-chip {
+    max-width: 60px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
