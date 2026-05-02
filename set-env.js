@@ -23,4 +23,4 @@ export const environment = {
 `;
 
 fs.writeFileSync(targetPath, envConfigFile);
-console.log('--- environment.ts SOBREESCRITO CON ÉXITO ---');
+console.log('--- environment.ts SOBREESCRITO CON ÉXITO ---',apiUrl);
